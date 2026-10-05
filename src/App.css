@@ -1,0 +1,300 @@
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f8fafc;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  font-size: 43px;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+  color: #c2cfe2;
+}
+
+.header p {
+  color: #74a0af;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* Task form */
+
+.task-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  background: #1e293b;
+  color: #f8fafc;
+  font-size: 16px;
+  outline: none;
+}
+
+.task-input:focus {
+  border-color: #60a5fa;
+}
+
+.task-input::placeholder {
+  color: #64748b;
+}
+
+.add-button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Filters */
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filter-button {
+  padding: 9px 18px;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  background: transparent;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filter-button:hover {
+  background: #334155;
+}
+
+.filter-button.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+/* Task list */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Task item */
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  transition: 0.2s ease;
+}
+
+.task-item:hover {
+  border-color: #475569;
+  transform: translateY(-1px);
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.task-text.completed {
+  color: #11981d;
+}
+
+/* Buttons */
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button,
+.delete-button,
+.save-button,
+.cancel-button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.edit-button {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.edit-button:hover {
+  background: #475569;
+}
+
+.delete-button {
+  background: #7f1d1d;
+  color: #fecaca;
+}
+
+.delete-button:hover {
+  background: #991b1b;
+}
+
+.save-button {
+  background: #166534;
+  color: #dcfce7;
+}
+
+.save-button:hover {
+  background: #15803d;
+}
+
+.cancel-button {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+/* Edit input */
+
+.edit-input {
+  flex: 1;
+  padding: 9px 12px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: #0f172a;
+  color: white;
+  outline: none;
+}
+
+/* Empty state */
+
+.empty-message {
+  text-align: center;
+  padding: 35px 20px;
+  color: #64748b;
+  border: 1px dashed #334155;
+  border-radius: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .app {
+    padding: 25px 15px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+    color: #c2cfe2;
+  }
+  .header p{
+    font-size: 15px;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+
+  .add-button {
+    width: 100%;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .filter-button {
+    flex: 1;
+    min-width: 90px;
+  }
+
+  .task-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .task-actions {
+    width: 100%;
+    margin-left: 30px;
+  }
+
+  .edit-button,
+  .delete-button,
+  .save-button,
+  .cancel-button {
+    flex: 1;
+  }
+}
+
+.task-section-title {
+  font-size: 17px;
+  font-weight: 400;
+  color: #e2e8f0;
+  margin-bottom: 12px;
+}
+.animated-title {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  font-size: 42px;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.animated-title span {
+  display: inline-block;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+  cursor: default;
+}
+
+.animated-title span:hover {
+  transform: translateY(-8px) rotate(-3deg);
+  color: #60a5fa;
+}
